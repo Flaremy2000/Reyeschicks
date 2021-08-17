@@ -26,6 +26,8 @@ function Contacto(){
     frame.setAttribute('src', 'View/contact.html');
 }
 
-$(() => {
+function cargado() {
     alert("Se mostro esto al cargar la pagina");
-})
+}
+
+window.onload = cargado();
