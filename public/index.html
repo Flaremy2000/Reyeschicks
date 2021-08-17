@@ -12,6 +12,7 @@
     <title>Reyes Farm</title>
 </head>
 <body>
+  <script src="/socket.io/socket.io.js" charset="utf-8"></script> 
     <!-- NavBar-->
     <div class="header">
         <h1>Chicken Reyes</h1>
@@ -53,17 +54,6 @@
     <div id="MainContent">
         <iframe id="MainContaint" src="View/Main.html" allowfullscreen>
         </iframe>
-    </div>    
-    <!-- Seccion pruebas Sockets -->
-   <script src="/socket.io/socket.io.js" charset="utf-8"></script> 
-    <div id="chat-conteiner" style="z-index: 50;">
-        <div id="chat-window">
-            <div id="output"></div>
-            <div id="action"></div>
-        </div>
-        <input type="text" id="username" placeholder="username">
-        <input type="text" id="message" placeholder="Message">
-        <button id="send">Send</button>
     </div>
     <!-- Inicio de Footer -->
     <footer id="foot" class="footer mt-auto py-3 bg-secondary">
