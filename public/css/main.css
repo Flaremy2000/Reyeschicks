@@ -94,6 +94,7 @@ button {
 	justify-content: center;
 	display: flex;
 	visibility: hidden;
+    z-index: 100;
 }
 
 .overlay.active {
