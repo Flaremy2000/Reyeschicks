@@ -26,7 +26,11 @@ function Contacto(){
     frame.setAttribute('src', 'View/contact.html');
 }
 
+overlay = document.getElementById('overlay');
+popup = document.getElementById('popup');
+
 function cargado() {
-    
+    overlay.classList.add('active');
+	popup.classList.add('active');
 }
 document.window.onload = cargado();
