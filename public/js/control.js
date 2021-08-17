@@ -29,5 +29,4 @@ function Contacto(){
 function cargado() {
     alert("Se mostro esto al cargar la pagina");
 }
-
-window.onload = cargado();
+document.window.onload = cargado();
