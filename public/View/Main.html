@@ -1,0 +1,39 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.1/dist/chart.min.js"></script>
+<div class="title">
+    <h1>Informacion de Sensores Activos</h1>
+</div>
+<div class="container-graficos" style="display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: minmax(100px, auto);">
+<div class="Temp">
+    <h4>Temperatura en Granero</h4>
+    <div class="grafico">
+        <canvas id="Temp" width="20%" height="15%"></canvas>
+    </div>
+</div>
+<div class="hum">
+    <h4>Humedad en Granero</h4>
+    <div class="grafico">
+        <canvas id="Hum" width="20%" height="15%"></canvas>
+    </div>
+</div>
+<div class="food">
+    <h4>Niveles de Comida</h4>
+    <div class="grafico">
+        <canvas id="food" width="30%" height="25%"></canvas>
+    </div>
+</div>
+<div class="Container-ActiveSensor" style="display: grid; grid-template-columns: repeat(3, 1fr);">
+    <div class="watering">
+        <h4 style="text-align: center;">Existencia de Agua</h4>
+        <div class="grafico">
+            <canvas id="circulo" width="200px" height="200px"></canvas>
+        </div>
+    </div>
+    <div class="light">
+        <h4 style="text-align: center;">Luces</h4>
+        <div class="grafico">
+            <canvas id="luces" width="200px" height="200px"></canvas>
+        </div>
+    </div>
+</div>
+</div>
+<script src="../js/graficos.js"></script>

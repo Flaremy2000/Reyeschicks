@@ -1,0 +1,116 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#chat-conteiner {
+    max-width: 600px;
+    margin: 30px auto;
+    border: 1px solid #ddd;
+    box-shadow: 1px 3px 5px rgba(0,0,0,.5);
+}
+
+#chat-window {
+    padding: 14px 0;
+    margin: 0 20px;
+    border-bottom: 1px solid #e9e9e9;
+    color: #555;
+}
+
+#output p{
+    color: #aaa;
+    padding: 14px 0;
+    margin: 0 20px;
+}
+
+#action p {
+    padding: 14px 0;
+    margin: 0 20px;
+    border-bottom: 1px solid #e9e9e9;
+    color: #555;
+}
+
+input {
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: 0;
+    background: #eee;
+    display: block;
+    width: 100%;
+}
+
+button {
+    background: #57ed85;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 0 0 2px 2px;
+}
+.header {
+    background-color: aliceblue;
+    position: absolute;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 20;
+}
+
+#MainContent {
+    position: relative;
+    top: 130px;
+    z-index: 10;
+    padding-bottom: 29%;
+    height: 0;
+}
+
+#MainContent iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#foot {
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 5;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+}
+
+@media (max-width: 1920px) {
+
+    #MainContent {
+        top: 150px;
+        padding-bottom: 37%;
+    } 
+  
+}
+@media (max-width: 991px) {
+
+    #MainContent {
+        top: 145px;
+    } 
+  
+}
+
+@media (max-width: 320px) {
+
+    #MainContent {
+        top: 145px;
+        padding-bottom: 45%;
+    } 
+  
+}
+@media (max-width: 495px) {
+
+    #MainContent {
+        top: 145px;
+        padding-bottom: 95%;
+    } 
+}
