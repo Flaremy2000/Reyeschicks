@@ -28,9 +28,15 @@ function Contacto(){
 
 overlay = document.getElementById('overlay');
 popup = document.getElementById('popup');
-
+EnviarLogin = document.getElementById('btn-EnviarLogin');
 function cargado() {
     overlay.classList.add('active');
 	popup.classList.add('active');
+
+    EnviarLogin.addEventListener('click', (e) => {
+        e.preventDefault();
+        overlay.classList.remove('active');
+	    popup.classList.remove('active');
+    })
 }
 document.window.onload = cargado();
