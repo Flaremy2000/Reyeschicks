@@ -37,6 +37,7 @@ function cargado() {
         e.preventDefault();
         overlay.classList.remove('active');
 	    popup.classList.remove('active');
+        EnviarLogin.setAttribute('style', 'z-index: -5');
     })
 }
-document.window.onload = cargado();
+window.onload = cargado();

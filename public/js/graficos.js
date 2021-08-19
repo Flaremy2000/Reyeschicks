@@ -1,3 +1,39 @@
+const socket = io();
+let agua = document.getElementById('circulo');
+let luces = document.getElementById('luces');
+ctxa = agua.getContext('2d');
+ctxl = luces.getContext('2d');
+socket.on('dataserial', (Serialdata) =>{
+    ChartTemp.data.datasets[0].data[0] = Serialdata.temp;
+    ChartTemp.update();
+    ChartHum.data.datasets[0].data[0] = Serialdata.hum;
+    ChartHum.update();
+    ChartFood.data.datasets[0].data[0] = Serialdata.peso;
+    ChartFood.update();
+    var imgObja = new Image();
+    var imgObjl = new Image();
+    if(Serialdata.Agua == 1){
+            imgObja.src = '../files/verde.png';
+            console.log('Agua llena');
+    }else{
+            imgObja.src = '../files/rojo.png';
+            console.log('Agua vacia');
+    }
+    if(Serialdata.luz == 1){
+            imgObjl.src = '../files/verde.png';
+            console.log('Luz encendida')
+    }else{
+            imgObjl.src = '../files/rojo.png';
+            console.log('Luz apagada')
+    }
+    imgObja.onload = () => {
+        ctxa.drawImage(imgObja,0,0);
+    }
+    imgObjl.onload = () => {
+        ctxl.drawImage(imgObjl,0,0);
+    }
+})
+
 var temp = document.getElementById('Temp').getContext('2d');
 var ChartTemp = new Chart(temp, {
     type: 'bar',
@@ -5,7 +41,7 @@ var ChartTemp = new Chart(temp, {
         labels: ['Cº'],
         datasets: [{
             label: 'Control de Temperatura',
-            data: [24],
+            data: [],
             bacgroundColor: [
                 'rgba(255,99, 132, 0.2)'
             ],
@@ -24,14 +60,15 @@ var ChartTemp = new Chart(temp, {
     }
 })
 
+
 var hum = document.getElementById('Hum').getContext('2d');
-var ChartTemp = new Chart(hum, {
+var ChartHum = new Chart(hum, {
     type: 'bar',
     data: {
         labels: ['%'],
         datasets: [{
             label: 'Control de Humedad',
-            data: [14],
+            data: [],
             bacgroundColor: [
                 'rgba(255,120, 132, 0.2)'
             ],
@@ -51,7 +88,7 @@ var ChartTemp = new Chart(hum, {
 })
 
 var food = document.getElementById('food').getContext('2d');
-var ChartTemp = new Chart(food, {
+var ChartFood = new Chart(food, {
     type: 'bar',
     data: {
         labels: ['KG'],
@@ -74,20 +111,4 @@ var ChartTemp = new Chart(food, {
             }
         }
     }
-})
-
-window.addEventListener('load', ()=> {
-    let canvasCirculo = document.getElementById('circulo');
-    let ctx = canvasCirculo.getContext('2d');
-    ctx.beginPath();
-    ctx.arc(100,100, 50, 0, 2* Math.PI);
-    ctx.stroke();
-})
-
-window.addEventListener('load', ()=> {
-    let canvasCirculo = document.getElementById('luces');
-    let ctx = canvasCirculo.getContext('2d');
-    ctx.beginPath();
-    ctx.arc(100,100, 50, 0, 2* Math.PI);
-    ctx.stroke();
 })
