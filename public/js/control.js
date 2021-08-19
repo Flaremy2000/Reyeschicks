@@ -25,6 +25,8 @@ function Informe(){
 function Contacto(){
     frame.setAttribute('src', 'View/contact.html');
 }
+cedula = document.getElementById('cedula');
+pass = document.getElementById('pass');
 
 overlay = document.getElementById('overlay');
 popup = document.getElementById('popup');

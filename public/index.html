@@ -57,12 +57,12 @@
         </iframe>
     </div>
     <!-- Inicio de Footer -->
-    <footer id="foot" class="footer mt-auto py-3 bg-secondary">
+    <div id="foot" class="footer mt-auto py-3 bg-secondary">
         <div class="container" style="text-align: center;">
             <div class="contentleft"><img src="svg/eggs.svg"></div>
             <span class="text-uppercase text-dark ">Derechos Reservados 2021 ©</span>  
         </div>
-    </footer>
+    </div>
     <!-- Comienzo de Formulario Flotante -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -128,8 +128,8 @@
           <h3>Inicie Sesion</h3><br>
           <form action="">
             <div class="contenedor-inputs">
-              <input type="number" placeholder="Cedula">
-              <input type="password" placeholder="Contraseña">
+              <input id="cedula" type="number" placeholder="Cedula" size="10" min="10" >
+              <input id="pass" type="password" placeholder="Contraseña">
             </div>
             <input id="btn-EnviarLogin" type="submit" class="btn-submit" value="Iniciar">
           </form>
